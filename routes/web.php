@@ -13,21 +13,9 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('index');
-});
-
-Route::get('/popular', function () {
-    return view('popular');
-});
-
-Route::get('/account', function () {
-    return view('account');
-});
-
-Route::get('/dashboard', function () {
-    return view('dashboard');
-
-});
+Route::view('/', 'index')-> name('index');
+Route::view('/account', 'account')-> name('account');
+Route::view('/dashboard', 'dashboard')-> name('dashboard');
+Route::view('/popular', 'popular')-> name('popular');
 
 

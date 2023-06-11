@@ -14,7 +14,7 @@
         <ul>
             <li><a href="{{route('index') }}">Home</a></li>
             <li><a id="active" href="#">Popular</a></li>
-            <li><a href="{{route('popular') }}"> My Account</a></li>
+            <li><a href="{{route('account') }}"> My Account</a></li>
             <li><a href="{{route('dashboard') }}">Dashboard</a></li>
         </ul>
     </nav>
