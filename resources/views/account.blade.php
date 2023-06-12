@@ -5,52 +5,32 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Home</title>
+    <title>Mijn Account</title>
     <link rel="stylesheet" href="css/style.css">
 </head>
 
 <body>
     <nav>
         <ul>
-            <li><a href="{{route('index') }}">Home</a></li>
-            <li><a href="{{route('popular') }}">Popular</a></li>
+            <li><a href="{{ route('index') }}">Home</a></li>
+            <li><a href="{{ route('popular') }}">Popular</a></li>
             <li><a id="active" href="#"> My Account</a></li>
-            <li><a href="{{route('dashboard') }}">Dashboard</a></li>
+            <li><a href="{{ route('dashboard') }}">Dashboard</a></li>
         </ul>
     </nav>
-    <div class="hero">
-        <h1>home</h1>
+    <div class="small_hero">
+        <h1>Mijn Account</h1>
     </div>
     <div class="container">
-        <div class="content">
-            <h2>Popular Questions</h2>
-            <div class="questionsContainer">
-                <div class="question">
-                    <h3>Question 1</h3>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, voluptatum.</p>
-                </div>
-                <div class="question">
-                    <h3>Question 2</h3>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, voluptatum.</p>
-                </div>
-                <div class="question">
-                    <h3>Question 3</h3>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, voluptatum.</p>
-                </div>
-                <div class="question">
-                    <h3>Question 4</h3>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, voluptatum.</p>
-                </div>
-                <div class="question">
-                    <h3>Question 5</h3>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, voluptatum.</p>
-                </div>
-                <div class="question">
-                    <h3>Question 6</h3>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, voluptatum.</p>
-                </div>
-            </div>
+        <div class="formContainer">
+            <h2>Log in</h2>
+            <form action="" method="post">
+                <input type="text" name="username" id="username" placeholder="gebruikersnaam">
+                <input type="password" name="password" id="password" placeholder="wachtwoord">
+                <input type="submit" value="Log in">
+            </form>
         </div>
+    </div>
     </div>
 
     <footer>

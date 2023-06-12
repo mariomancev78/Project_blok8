@@ -17,8 +17,6 @@ return new class extends Migration
             $table->integer('question_id');
             $table->string('title');
             $table->text('content');
-            $table->rememberToken();
-            $table->timestamps();
         });
     }
 

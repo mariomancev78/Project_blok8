@@ -17,8 +17,6 @@ return new class extends Migration
             $table->string('title', 100);
             $table->string('description', 100);
             $table->text('content');
-            $table->rememberToken();
-            $table->timestamps();
         });
     }
 

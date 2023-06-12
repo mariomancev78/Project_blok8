@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Home</title>
+    <title>Populair</title>
     <link rel="stylesheet" href="css/style.css">
 </head>
 
@@ -18,8 +18,8 @@
             <li><a href="{{route('dashboard') }}">Dashboard</a></li>
         </ul>
     </nav>
-    <div class="hero">
-        <h1>Hero</h1>
+    <div class="small_hero">
+        <h1>Populair</h1>
     </div>
     <div class="container">
         <div class="content">

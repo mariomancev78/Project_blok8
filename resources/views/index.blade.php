@@ -13,43 +13,25 @@
     <nav>
         <ul>
             <li><a id="active" href="#">Home</a></li>
-            <li><a href="{{route('popular') }}">Popular</a></li>
-            <li><a href="{{route('account') }}"> My Account</a></li>
-            <li><a href="{{route('dashboard') }}">Dashboard</a></li>
+            <li><a href="{{ route('popular') }}">Popular</a></li>
+            <li><a href="{{ route('account') }}"> My Account</a></li>
+            <li><a href="{{ route('dashboard') }}">Dashboard</a></li>
         </ul>
     </nav>
     <div class="hero">
-        <h1>home</h1>
+        <h1>Home</h1>
     </div>
     <div class="container">
-        <div class="content">
-            <h2>Popular Questions</h2>
-            <div class="questionsContainer">
-                <div class="question">
-                    <h3>Question 1</h3>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, voluptatum.</p>
-                </div>
-                <div class="question">
-                    <h3>Question 2</h3>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, voluptatum.</p>
-                </div>
-                <div class="question">
-                    <h3>Question 3</h3>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, voluptatum.</p>
-                </div>
-                <div class="question">
-                    <h3>Question 4</h3>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, voluptatum.</p>
-                </div>
-                <div class="question">
-                    <h3>Question 5</h3>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, voluptatum.</p>
-                </div>
-                <div class="question">
-                    <h3>Question 6</h3>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, voluptatum.</p>
-                </div>
-            </div>
+        <div class="formContainer">
+            <h2>Stel een vraag</h2>
+            <form action="" method="POST">
+                <input type="text" name="name" id="name" placeholder="naam">
+                <input type="text" name="title" id="title" placeholder="titel">
+                <input type="text" name="beschrijving" id="description" placeholder="beschrijving">
+                <textarea name="content" id="content" cols="30" rows="10" placeholder="Jouw vraag"> </textarea>
+                <input type="submit" value="Submit">
+                <p>nog geen account? <a href="{{ route('account') }}">Maak er een aan</a> </p>
+            </form>
         </div>
     </div>
 
