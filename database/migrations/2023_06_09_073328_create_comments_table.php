@@ -13,11 +13,20 @@ return new class extends Migration
     {
         Schema::create('comments', function (Blueprint $table) {
             $table->id();
-            $table->integer('user_id');
-            $table->integer('question_id');
-            $table->string('title');
-            $table->text('content');
+
+            $table->unsignedBigInteger('user_id');
+
+            $table->unsignedBigInteger('question_id');
+
+            $table->text('title');
+            $table->text('body');
+            $table->timestamps();
         });
+
+        // Schema::table('comments', function (Blueprint $table) {
+        //     $table->foreign('user_id')->on('users')->references('id');
+        //     $table->foreign('question_id')->on('questions')->references('id');
+        // });
     }
 
     /**

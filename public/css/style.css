@@ -1,18 +1,31 @@
 /* global styling */
+
+* {
+    box-sizing: border-box;
+}
+:root{
+    --primary-color: #333;
+    --accent-color: #000;
+    --background-color: #fff;
+    --border-color: #fff;
+}
+
 body {
-    background-color: #f5f5f5;
+    background-color: var(--background-color);
     font-family: 'Roboto', sans-serif;
     font-size: 16px;
-    color: #333;
+    color: var(--primary-color);
     line-height: 1.5;
     margin: 0;
     padding: 0;
     overflow-x: hidden;
+    height: 100%;
+
 }
 
 /* nav */
 nav {
-    background-color: #fff;
+    background-color: var(--background-color);
     box-shadow: 0 1px 2px rgba(0, 0, 0, .1);
     position: fixed;
     top: 0;
@@ -27,7 +40,7 @@ nav ul {
     padding: 0;
     list-style: none;
     overflow: hidden;
-    background-color: #fff;
+    background-color:var(--background-color);
     display: flex;
     justify-content: flex-end;
     align-items: center;
@@ -36,27 +49,27 @@ nav ul {
 nav ul li a {
     display: block;
     padding: 20px 20px;
-    border-right: 1px solid #f4f4f4;
+    border-right: 1px solid var(--border-color);
     text-decoration: none;
-    color: #333;
+    color: var(--primary-color);
 }
 
 nav ul li a:hover {
-    color: #000;
+    color: var(--accent-color);
 }
 
 #active {
-    background-color: #333;
-    color: #fff;
+    background-color: var(--primary-color);
+    color: var(--background-color);
 }
 
 #active :hover {
-    color: #000;
+    color: var(--accent-color);
 }
 
 /* hero */
 .hero {
-    background-color: #333;
+    background-color: var(--primary-color);
     background-size: cover;
     background-position: center;
     margin: 30px 5px;
@@ -67,7 +80,7 @@ nav ul li a:hover {
     text-align: center;
 }
 .small_hero{
-    background-color: #333;
+    background-color: var(--primary-color);
     background-size: cover;
     background-position: center;
     margin: 30px 5px;
@@ -79,13 +92,15 @@ nav ul li a:hover {
 }
 
 .hero h1 {
-    color: #fff;
+    color: var(--border-color);
+    width: 100%;
     font-size: 50px;
     margin: 0;
     padding: 0;
 }
 .small_hero h1 {
-    color: #fff;
+    color: var(--border-color);
+    width: 100%;
     font-size: 30px;
     margin: 0;
     padding: 0;
@@ -122,7 +137,7 @@ nav ul li a:hover {
     height: 50px;
     margin: 10px 0;
     padding: 0 10px;
-    border: 1px solid #333;
+    border: 1px solid var(--primary-color);
     border-radius: 5px;
     outline: none;
 }
@@ -131,24 +146,21 @@ nav ul li a:hover {
     width: 100%;
     margin: 10px 0;
     padding: 0 10px;
-    border: 1px solid #333;
+    border: 1px solid var(--primary-color);
     border-radius: 5px;
     outline: none;
 }
-
-
-
-
 /* footer*/
 footer {
     width: 100%;
     height: 25vh;
+    margin-top: 25vh;
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    justify-content:  center;
     align-items: center;
-    background-color: #333;
-    color: #fff;
+    background-color: var(--primary-color);
+    color: var(--border-color);
     text-align: center;
 }
 .titleContainer{

@@ -1,6 +1,8 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\UserController;
+use App\Http\Controllers\QuestionController;
 
 /*
 |--------------------------------------------------------------------------
@@ -14,8 +16,17 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::view('/', 'index')-> name('index');
+Route::post('/CreateQuestion', [QuestionController::class, 'Create'])->name('CreateQuestion');
+
+
+Route::get('/register', [UserController::class, 'show'])-> name('register');
+Route::post('/CreateUser', [UserController::class, 'Create'])->name('Create');
+
 Route::view('/account', 'account')-> name('account');
+Route::post('/login', [UserController::class, 'login'])->name('login');
+
 Route::view('/dashboard', 'dashboard')-> name('dashboard');
-Route::view('/popular', 'popular')-> name('popular');
+
+Route::get('/popular', [QuestionController::class, 'Retrieve'])->name('popular');
 
 

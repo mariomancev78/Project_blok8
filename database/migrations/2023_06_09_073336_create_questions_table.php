@@ -13,11 +13,19 @@ return new class extends Migration
     {
         Schema::create('questions', function (Blueprint $table) {
             $table->id();
-            $table->integer('user_id');
-            $table->string('title', 100);
-            $table->string('description', 100);
-            $table->text('content');
+
+            $table->unsignedBigInteger('user_id');
+
+            $table->text('title');
+            $table->text('description');
+            $table->text('body');
+            $table->timestamps();
         });
+
+        // Schema::table('questions', function (Blueprint $table) {
+        //     $table->foreign('user_id')->references('id')->on('users');
+        // });
+
     }
 
     /**
@@ -25,6 +33,6 @@ return new class extends Migration
      */
     public function down(): void
     {
-        //
+        Schema::dropIfExists('questions');
     }
 };
