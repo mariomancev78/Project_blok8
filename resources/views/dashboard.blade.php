@@ -8,29 +8,21 @@
         <div class="content">
             <h2>Popular Questions</h2>
             <div class="questionsContainer">
-                <div class="question">
-                    <h3>Question 1</h3>
+                <div class="gridItem">
+                    <h3> Questions</h3>
                     <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, voluptatum.</p>
+                    <a href="#">Edit the  questions</a>
                 </div>
-                <div class="question">
-                    <h3>Question 2</h3>
+                <div class="gridItem">
+                    <h3>Comments</h3>
                     <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, voluptatum.</p>
+                    <a href="#">Edit the comments</a>
+
                 </div>
-                <div class="question">
-                    <h3>Question 3</h3>
+                <div class="gridItem">
+                    <h3>Users</h3>
                     <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, voluptatum.</p>
-                </div>
-                <div class="question">
-                    <h3>Question 4</h3>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, voluptatum.</p>
-                </div>
-                <div class="question">
-                    <h3>Question 5</h3>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, voluptatum.</p>
-                </div>
-                <div class="question">
-                    <h3>Question 6</h3>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, voluptatum.</p>
+                    <a href="#">Edit the users</a>
                 </div>
             </div>
         </div>

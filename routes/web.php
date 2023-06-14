@@ -22,11 +22,10 @@ Route::post('/CreateQuestion', [QuestionController::class, 'Create'])->name('Cre
 Route::get('/register', [UserController::class, 'show'])-> name('register');
 Route::post('/CreateUser', [UserController::class, 'Create'])->name('Create');
 
-Route::view('/account', 'account')-> name('account');
-Route::post('/login', [UserController::class, 'login'])->name('login');
+Route::view('/login', 'login')-> name('account');
+Route::post('/loginUser', [UserController::class, 'login'])->name('loginUser');
 
 Route::view('/dashboard', 'dashboard')-> name('dashboard');
 
 Route::get('/popular', [QuestionController::class, 'Retrieve'])->name('popular');
-
 
