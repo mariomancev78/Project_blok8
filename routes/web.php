@@ -19,11 +19,13 @@ Route::view('/', 'index')-> name('index');
 Route::post('/CreateQuestion', [QuestionController::class, 'Create'])->name('CreateQuestion');
 
 
-Route::get('/register', [UserController::class, 'show'])-> name('register');
+Route::view('/register', 'register')-> name('register');
 Route::post('/CreateUser', [UserController::class, 'Create'])->name('Create');
 
 Route::view('/login', 'login')-> name('account');
 Route::post('/loginUser', [UserController::class, 'login'])->name('loginUser');
+
+Route::get('/logout', [UserController::class, 'logout'])->name('logout');
 
 Route::view('/dashboard', 'dashboard')-> name('dashboard');
 
