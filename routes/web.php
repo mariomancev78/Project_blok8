@@ -14,20 +14,18 @@ use App\Http\Controllers\QuestionController;
 | be assigned to the "web" middleware group. Make something great!
 |
 */
+Route::view ('/login', 'authentication/login')-> name('login');
+Route::view ('/', 'home')-> name('index');
+Route::view ('/user/register', 'authentication/register')-> name('register');
 
-Route::view('/', 'index')-> name('index');
-Route::post('/CreateQuestion', [QuestionController::class, 'Create'])->name('CreateQuestion');
+Route::post ('/user/create', [UserController::class, 'save'])->name('CreateUser');
+Route::post ('/user/login', [UserController::class, 'login'])->name('LoginUser');
+Route::get  ('/user/logout', [UserController::class, 'logout'])->name('LogoutUser');
 
 
-Route::view('/register', 'register')-> name('register');
-Route::post('/CreateUser', [UserController::class, 'Create'])->name('Create');
+Route::view ('/dashboard/index', 'dashboard/index')->name('Dashboard');
+Route::view ('dashboard/users', 'dashboard/users')->name('UserDashboard');
 
-Route::view('/login', 'login')-> name('account');
-Route::post('/loginUser', [UserController::class, 'login'])->name('loginUser');
 
-Route::get('/logout', [UserController::class, 'logout'])->name('logout');
-
-Route::view('/dashboard', 'dashboard')-> name('dashboard');
-
-Route::get('/popular', [QuestionController::class, 'Retrieve'])->name('popular');
-
+Route::get  ('question/popular', [QuestionController::class, 'show'])->name('popular');
+Route::post ('question/create', [QuestionController::class, 'save'])->name('CreateQuestion');

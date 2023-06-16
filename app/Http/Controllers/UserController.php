@@ -11,7 +11,7 @@ use Illuminate\Support\Facades\Log;
 
 class UserController extends Controller
 {
-    public function Create(request $request)
+    public function save(request $request)
     {
 
         $user = new User;
@@ -21,6 +21,9 @@ class UserController extends Controller
         $save = $user->save();
 
         if ($save) {
+            $request->session()->put('LoggedUser', $user->id);
+            $request->session()->put('LoggedUserName', $user->name);
+            $request->session()->put('LoggedUserRole', $user->role);
             return redirect('/')->with('message', 'Nieuwe gebruiker aangemaakt');
         } else {
             return back()->with('message', 'Er is iets mis gegaan, probeer het later opnieuw');
@@ -37,16 +40,16 @@ class UserController extends Controller
                 $request->session()->put('LoggedUserName', $user->name);
                 $request->session()->put('LoggedUserRole', $user->role);
                 if ($user->role == 'admin') {
-                    return redirect('dashboard');
+                    return redirect('/dashboard/index');
                 }else{
                     return redirect('/');
                 }
             } else {
                 
-                return back()->with('fail', 'Invalid Password');
+                return back()->with('message', 'Invalid Password');
             }
         } else {
-            return back()->with('fail', 'No Account Found');
+            return back()->with('message', 'No Account Found');
         }
     }
     public function logout()
