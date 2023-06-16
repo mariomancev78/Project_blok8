@@ -61,4 +61,30 @@ class UserController extends Controller
             return redirect('login');
         }
     }
+    public function show()
+    {
+        $users = User::all();
+        return view('dashboard/users', ['users' => $users]);
+    }
+    public function edit($id)
+    {
+        $user = User::find($id);
+        return view('dashboard/users/edit', ['user' => $user]);
+    }
+    public function update(request $request)
+    {
+        $user = User::find($request->id);
+        $user->name = $request->name;
+        $user->role = $request->role;
+        $user->password = Hash::make($request->password);
+        $user->save();
+        return redirect()->route('UserDashboard')->with('message', 'Gebruiker aangepast');
+    }
+
+    public function delete($id)
+    {
+        $user = User::find($id);
+        $user->delete();
+        return redirect()->route('UserDashboard')->with('message', 'Gebruiker verwijderd');
+    }
 }
