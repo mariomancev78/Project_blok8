@@ -37,8 +37,8 @@ class QuestionController extends Controller
     public function showSingle($id)
     {
         $questions = Question::find($id);
+        $users = User::all();
         $comments = Comment::where('question_id', $id)->get();
-        $users = User::where('id', $questions->user_id)->get();
 
         return view('question', ['questions' => $questions, 'comments' => $comments, 'users' => $users]);
     }

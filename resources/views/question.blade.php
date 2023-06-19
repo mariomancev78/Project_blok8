@@ -24,11 +24,9 @@
                         <div class="commentBody">
                             {{ $comment->body }}
                         </div>
-                        @foreach ($users as $user)
-                                <div class="commentUser">
-                                   <p>Geplaatst door: {{ session()->get('LoggedUserName') }}</p>
-                                </div>
-                        @endforeach
+                        <div class="commentUser">
+                            Geplaatst door: {{ $users->where('id', $comment->user_id)->first()->name}}
+                        </div>
                     </div>
                 @endforeach
             </div>
