@@ -13,7 +13,7 @@
                     <h3>{{$question->title}}</h3>
                     <p>{{$question->description}}</p>
                     <p>{{$question->name}}</p>
-                    <a href="#">Bekijk Dit bericht</a>
+                    <a href="{{route('ShowQuestion',$question->id)}}">Bekijk Dit bericht</a>
                 </div>
                 @endforeach
             </div>
