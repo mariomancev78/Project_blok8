@@ -26,7 +26,7 @@
                         </div>
                         @foreach ($users as $user)
                                 <div class="commentUser">
-                                   <p>Geplaatst door: {{ $user->name }}</p>
+                                   <p>Geplaatst door: {{ session()->get('LoggedUserName') }}</p>
                                 </div>
                         @endforeach
                     </div>

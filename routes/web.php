@@ -10,10 +10,7 @@ Route::view ('/', 'home')-> name('index');
 Route::view ('login', 'authentication/login')-> name('login');
 Route::view ('register', 'authentication/register')-> name('register');
 
-
 Route::view ('/dashboard/index', 'dashboard/index')->name('Dashboard');
-
-
 
 //registreren en inloggen
 Route::post ('user/create',    [UserController::class, 'save'])->  name('CreateUser');
